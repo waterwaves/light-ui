@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Parallex - Demo</title>
+  <title>Parallax - Demo</title>
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   <style type="text/css">
     body {
       margin: 0;
     }
-    div[data-type=parallex-bg] {
+    div[data-type=parallax-bg] {
       height: 500px;
       width: 100%;
     }
@@ -18,29 +18,32 @@
     }
     .bg2 {
       background-image: url('http://www.mrwallpaper.com/wallpapers/beach-party-cocktail.jpg');
-      background-position: -100px -200px;
+      background-position: -100px 30%;
       background-size: 200%;
     }
     .content {
       padding: 40px;
+      box-shadow: 0 5px 10px 2px rgba(0,0,0, 0.3);
+      position: relative;
     }
     .footer {
       text-align: center;
       padding: 50px;
+      box-shadow: 0 -5px 10px 2px rgba(0,0,0, 0.3);
     }
   </style>
 </head>
 <body>
-  <div data-type="parallex-bg" data-speed=".2" data-responsive="768" data-size-ratio="2" class="bg1"></div>
+  <div data-type="parallax-bg" data-speed=".5" data-responsive="768" data-size-ratio="2" class="bg1"></div>
   <div class="content">
-    <h1>Here is the Demo of Parallex</h1>
+    <h1>Here is the Demo of Parallax</h1>
     <p>I love responsive design!</p>
     
     <p>An sumo veritus eos, eu mea inani ancillae. Has ut iracundia delicatissimi, utroque facilisis te eos. Quaeque corpora scriptorem ex nam, eos stet liber sanctus ea. In quo modo dico. Sed an elit porro splendide, quas iisque nostrum mel ut, sed te nisl iusto mundi. Nisl duis id vim, iudicabit intellegat mea et. Cu bonorum nonumes nec, dicant imperdiet concludaturque sed ea.</p>
     
     <p>Alia fabulas ei mea, te dico everti vel. Eu qui alia tritani. Est ex munere mentitum, nihil quidam labores mel in, eos eu quas paulo conclusionemque. Ne officiis tractatos duo, te electram periculis cum, officiis salutandi nec ut. Esse vocent fastidii per ei, pro no voluptua efficiendi. At dolor debitis prodesset has. Cibo dicam ut has. Vim ex discere aliquando. Ad quas vitae sed, duis feugiat in eam, falli errem ne pri.</p>
   </div>
-  <div data-type="parallex-bg" data-speed=".2" data-responsive="768" data-size-ratio="2" class="bg2"></div>
+  <div data-type="parallax-bg" data-speed=".1" data-responsive="768" data-size-ratio="2" class="bg2"></div>
   <div class="footer">
     Demo by Shan He @ <a href="http://waterwaves.me">waterwaves.me</a>
     <br>
@@ -49,6 +52,6 @@
 
   </div>
 </body>
-<script type="text/javascript" src="parallex.js">
+<script type="text/javascript" src="parallax.js">
 </script>
 </html>
