@@ -1,0 +1,119 @@
+.main-container {
+  max-width: 1024px;
+  margin: auto;
+}
+.row {
+  clear: both;
+  width: 100%;
+  display: table;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+.row .col-1 {
+  float: left;
+  margin-left: 2%;
+  width: 6.5%;
+  display: table-row;
+}
+.row .col-1:first-child {
+  margin-left: 0;
+}
+.row .col-2 {
+  float: left;
+  margin-left: 2%;
+  width: 15%;
+  display: table-row;
+}
+.row .col-2:first-child {
+  margin-left: 0;
+}
+.row .col-3 {
+  float: left;
+  margin-left: 2%;
+  width: 23.5%;
+  display: table-row;
+}
+.row .col-3:first-child {
+  margin-left: 0;
+}
+.row .col-4 {
+  float: left;
+  margin-left: 2%;
+  width: 32%;
+  display: table-row;
+}
+.row .col-4:first-child {
+  margin-left: 0;
+}
+.row .col-5 {
+  float: left;
+  margin-left: 2%;
+  width: 40.5%;
+  display: table-row;
+}
+.row .col-5:first-child {
+  margin-left: 0;
+}
+.row .col-6 {
+  float: left;
+  margin-left: 2%;
+  width: 49%;
+  display: table-row;
+}
+.row .col-6:first-child {
+  margin-left: 0;
+}
+.row .col-7 {
+  float: left;
+  margin-left: 2%;
+  width: 57.5%;
+  display: table-row;
+}
+.row .col-7:first-child {
+  margin-left: 0;
+}
+.row .col-8 {
+  float: left;
+  margin-left: 2%;
+  width: 66%;
+  display: table-row;
+}
+.row .col-8:first-child {
+  margin-left: 0;
+}
+.row .col-9 {
+  float: left;
+  margin-left: 2%;
+  width: 74.5%;
+  display: table-row;
+}
+.row .col-9:first-child {
+  margin-left: 0;
+}
+.row .col-10 {
+  float: left;
+  margin-left: 2%;
+  width: 83%;
+  display: table-row;
+}
+.row .col-10:first-child {
+  margin-left: 0;
+}
+.row .col-11 {
+  float: left;
+  margin-left: 2%;
+  width: 91.5%;
+  display: table-row;
+}
+.row .col-11:first-child {
+  margin-left: 0;
+}
+.row .col-12 {
+  float: left;
+  margin-left: 2%;
+  width: 100%;
+  display: table-row;
+}
+.row .col-12:first-child {
+  margin-left: 0;
+}

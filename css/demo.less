@@ -1,0 +1,44 @@
+@page-width-desktop: 1600px;
+@page-width-laptop: 1024px;
+@page-width-tablet: 768px;
+@page-width-phone: 320px;
+@base-col-margin-left: 2%;
+@base-margin-bottom: 10px;
+@base-margin-top: 5px;
+@total-col-num: 12;
+
+@media screen and (max-width: @page-width-tablet) {
+
+}
+
+
+.main-container {
+  max-width: @page-width-laptop;
+  margin: auto;
+}
+
+.row {
+  clear: both;
+  width: 100%;
+  display: table;
+  margin-bottom: @base-margin-bottom;
+  margin-top: @base-margin-top;
+  .generate-columns(12);
+}
+
+.col(@col-num) when (ispercentage(@base-col-margin-left)) {
+  float: left;
+  margin-left: @base-col-margin-left;
+  width: percentage((1+@base-col-margin-left / 100) / @total-col-num * @col-num - @base-col-margin-left / 100);
+  display: table-row;
+}
+
+.generate-columns(@n, @i : 1) when (@i =< @n) {
+  & .col-@{i} {
+    .col(@i);
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  .generate-columns(@n, (@i + 1));
+}
