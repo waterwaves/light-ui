@@ -2,10 +2,16 @@
 @page-width-laptop: 1024px;
 @page-width-tablet: 768px;
 @page-width-phone: 320px;
+
+@main-container-margin: 20px;
+
 @base-col-margin-left: 2%;
 @base-margin-bottom: 10px;
 @base-margin-top: 5px;
 @total-col-num: 12;
+
+@top-nav-height: 30px;
+@bottom-nav-height: 60px;
 
 @media screen and (max-width: @page-width-tablet) {
 
@@ -13,6 +19,11 @@
 
 
 .main-container {
+  max-width: @page-width-laptop;
+  margin: @main-container-margin auto;
+}
+
+.container {
   max-width: @page-width-laptop;
   margin: auto;
 }
@@ -41,4 +52,34 @@
     }
   }
   .generate-columns(@n, (@i + 1));
+}
+
+[data-type=nav] {
+  &.top,
+  &.bottom {
+    left: 0;
+    right: 0;
+  }
+  &.top {
+    height: @top-nav-height;
+  }
+  &.bottom {
+    height: @bottom-nav-height;
+  }
+  &.fixed {
+    &.top {
+      top: 0;
+      & + .main-container {
+        margin-top: @top-nav-height + @main-container-margin;
+      }
+    }
+    &.bottom {
+      bottom: 0;
+      // TODO need to add js for this function
+    }
+    position: fixed;
+  }
+}
+.is-fixed (@a) when(@a = fixed) {
+  position: fixed;
 }

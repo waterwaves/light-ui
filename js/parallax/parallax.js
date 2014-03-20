@@ -8,6 +8,7 @@
   Background image is inside a contain, e.g. div, img, section, etc.
   These properties are required:
     data-type="parallax-bg"
+
   These properties are optional:
     data-speed      should be between 0 and 1, the default is 0.1
     data-responsive should be the window width, of which parallax will be turned
@@ -18,12 +19,12 @@
 $(document).ready(function(){
   $('[data-type=parallax-bg]').each(function(){
     var $bgImg = $(this);
+    var width_height_ratio = parseFloat($bgImg.data('size-ratio'));
+    if (width_height_ratio) {
+      $bgImg.css('height', parseFloat($bgImg.css('width')) / width_height_ratio);
+    }
     var responsive_size = parseFloat($bgImg.data('responsive'));
     if (!responsive_size || responsive_size < 320 || window.innerWidth <= responsive_size) {
-      var width_height_ratio = parseFloat($bgImg.data('size-ratio'));
-      if (width_height_ratio) {
-        $bgImg.css('height', parseFloat($bgImg.css('width')) / width_height_ratio);
-      }
       return;
     }
 
