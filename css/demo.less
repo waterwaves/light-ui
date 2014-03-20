@@ -3,15 +3,15 @@
 @page-width-tablet: 768px;
 @page-width-phone: 320px;
 
-@main-container-margin: 20px;
+@main-container-margin: 20px; // Both margin-top and margin-bottom of main-container.
 
 @base-col-margin-left: 2%;
 @base-margin-bottom: 10px;
 @base-margin-top: 5px;
 @total-col-num: 12;
 
-@top-nav-height: 30px;
-@bottom-nav-height: 60px;
+@top-nav-height: auto;
+@bottom-nav-height: auto;
 
 @media screen and (max-width: @page-width-tablet) {
 
@@ -69,13 +69,13 @@
   &.fixed {
     &.top {
       top: 0;
-      & + .main-container {
-        margin-top: @top-nav-height + @main-container-margin;
-      }
+      // changing the margin-top of main-container cannot be achieved due to
+      // the value is auto; therefore, move this function into JS.
     }
     &.bottom {
       bottom: 0;
-      // TODO need to add js for this function
+      // changing the margin-bottom of main-container cannot be achieved in CSS,
+      // therefore, move this functionality into JS.
     }
     position: fixed;
   }

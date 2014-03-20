@@ -3,12 +3,12 @@
 <head>
   <title>Parallax - Demo</title>
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <link rel="stylesheet" href="../../css/demo.css"/>
   <style type="text/css">
     body {
       margin: 0;
     }
     div[data-type=parallax-bg] {
-      /*height: 500px;*/
       width: 100%;
     }
     .bg1 {
@@ -28,17 +28,26 @@
     }
     .footer {
       text-align: center;
-      padding: 300px 50px ;
+      padding: 100px 50px ;
       box-shadow: 0 -5px 10px 2px rgba(0,0,0, 0.3);
+      height: auto !important;
     }
-    [data-type=header].float {
-      height: 20px;
+
+    /* TODO implement this to less */
+    .avatar-container {
+      max-width: 150px;
+      margin: 50px auto;
+    }
+    .avatar-container img {
       width: 100%;
     }
+    .round {
+      border-radius: 50%;
+    }
   </style>
+  <script type="text/javascript" src="parallax.js"></script>
 </head>
 <body>
-
   <div data-type="parallax-bg" data-speed=".5" data-responsive="768" data-size-ratio="2" class="bg1"></div>
   <div class="content">
     <h1>Here is the Demo of Parallax</h1>
@@ -49,14 +58,16 @@
     <p>Alia fabulas ei mea, te dico everti vel. Eu qui alia tritani. Est ex munere mentitum, nihil quidam labores mel in, eos eu quas paulo conclusionemque. Ne officiis tractatos duo, te electram periculis cum, officiis salutandi nec ut. Esse vocent fastidii per ei, pro no voluptua efficiendi. At dolor debitis prodesset has. Cibo dicam ut has. Vim ex discere aliquando. Ad quas vitae sed, duis feugiat in eam, falli errem ne pri.</p>
   </div>
   <div data-type="parallax-bg" data-speed=".1" data-responsive="768" data-size-ratio="2" class="bg2"></div>
-  <div class="footer">
-    Demo by Shan He @ <a href="http://waterwaves.me">waterwaves.me</a>
-    <br>
-    <a href="mailto:sean.shanhe@gmail.com">sean.shanhe@gmail.com</a> &bull;
-    <a href="http://www.linkedin.com/in/shanhe">LinkedIn</a>
-
-  </div>
+  <footer data-type=nav class="bottom footer">
+      <div class="avatar-container">
+        <img class="avatar round" src="https://scontent-b.xx.fbcdn.net/hphotos-frc3/t1.0-9/1000088_475944119163040_1663568325_n.jpg" alt=""/>
+      </div>
+      <div>
+        Demo by Shan He @ <a href="http://waterwaves.me">waterwaves.me</a>
+        <br>
+        <a href="mailto:sean.shanhe@gmail.com">sean.shanhe@gmail.com</a> &bull;
+        <a href="http://www.linkedin.com/in/shanhe">LinkedIn</a>
+      </div>
+  </footer>
 </body>
-<script type="text/javascript" src="parallax.js">
-</script>
 </html>

@@ -127,10 +127,10 @@
   right: 0;
 }
 [data-type=nav].top {
-  height: 30px;
+  height: auto;
 }
 [data-type=nav].bottom {
-  height: 60px;
+  height: auto;
 }
 [data-type=nav].fixed {
   position: fixed;
@@ -138,12 +138,6 @@
 [data-type=nav].fixed.top {
   top: 0;
 }
-[data-type=nav].fixed.top + .main-container {
-  margin-top: 50px;
-}
 [data-type=nav].fixed.bottom {
   bottom: 0;
-}
-[data-type=nav].fixed.bottom + .main-container {
-  margin-bottom: 80px;
 }
