@@ -13,6 +13,8 @@
 @top-nav-height: auto;
 @bottom-nav-height: auto;
 
+@avatar-width: 150px;
+
 @media screen and (max-width: @page-width-tablet) {
 
 }
@@ -80,6 +82,21 @@
     position: fixed;
   }
 }
-.is-fixed (@a) when(@a = fixed) {
-  position: fixed;
+
+.avatar {
+  // This is for div! Still needs background image, no <img> plz.
+  // no wrapper means the margin needs adjusting manually.
+  width: @avatar-width;
+  height: @avatar-width;
+
+  &.round {
+    border-radius: 50%;
+  }
+  &.avatar-badge {
+    border: 6px solid white;
+    box-shadow: 1px 2px 10px grey;
+  }
+  &.avatar-depressed {
+    box-shadow: 2px 3px 6px rgba(0,0,0,.7) inset;
+  }
 }

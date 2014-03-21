@@ -35,14 +35,15 @@
 
     /* TODO implement this to less */
     .avatar-container {
-      max-width: 150px;
       margin: 50px auto;
     }
-    .avatar-container img {
-      width: 100%;
+    .avatar {
+      background: url('https://scontent-b.xx.fbcdn.net/hphotos-frc3/t1.0-9/1000088_475944119163040_1663568325_n.jpg');
+      background-size: cover;
     }
-    .round {
-      border-radius: 50%;
+    .avatar-depressed {
+      /*background: url('https://scontent-b.xx.fbcdn.net/hphotos-frc3/t1.0-9/1000088_475944119163040_1663568325_n.jpg');*/
+      box-shadow: 2px 3px 4px rgba(0,0,0,.7) inset;
     }
   </style>
   <script type="text/javascript" src="parallax.js"></script>
@@ -59,9 +60,7 @@
   </div>
   <div data-type="parallax-bg" data-speed=".1" data-responsive="768" data-size-ratio="2" class="bg2"></div>
   <footer data-type=nav class="bottom footer">
-      <div class="avatar-container">
-        <img class="avatar round" src="https://scontent-b.xx.fbcdn.net/hphotos-frc3/t1.0-9/1000088_475944119163040_1663568325_n.jpg" alt=""/>
-      </div>
+    <div class="avatar-container avatar avatar-depressed round"></div>
       <div>
         Demo by Shan He @ <a href="http://waterwaves.me">waterwaves.me</a>
         <br>
