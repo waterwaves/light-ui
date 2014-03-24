@@ -5,7 +5,7 @@
 
 @main-container-margin: 20px; // Both margin-top and margin-bottom of main-container.
 
-@base-col-margin-left: 2%;
+@base-col-margin: 1.5%;
 @base-margin-bottom: 10px;
 @base-margin-top: 5px;
 @total-col-num: 12;
@@ -14,10 +14,6 @@
 @bottom-nav-height: auto;
 
 @avatar-width: 150px;
-
-@media screen and (max-width: @page-width-tablet) {
-
-}
 
 
 .main-container {
@@ -34,24 +30,44 @@
   clear: both;
   width: 100%;
   display: table;
-  margin-bottom: @base-margin-bottom;
-  margin-top: @base-margin-top;
-  .generate-columns(12);
+  margin: @base-margin-top -@base-col-margin @base-margin-bottom -@base-col-margin;
+  .generate-columns(@total-col-num);
+  .col-0 {
+    display: none;
+  }
 }
 
-.col(@col-num) when (ispercentage(@base-col-margin-left)) {
+.col(@col-num) when (ispercentage(@base-col-margin)) {
   float: left;
-  margin-left: @base-col-margin-left;
-  width: percentage((1+@base-col-margin-left / 100) / @total-col-num * @col-num - @base-col-margin-left / 100);
+  margin: 0 @base-col-margin;
+  width: percentage(1 / @total-col-num * @col-num - @base-col-margin * 2 / 100);
   display: table-row;
 }
 
+@media screen and (max-width: @page-width-tablet) {
+  .row {
+    .generate-tab-columns(@total-col-num);
+  }
+  .col-tab-0 {
+    display: none;
+  }
+}
+
+.generate-tab-columns(@n, @i: 1) when (@i =< @n) {
+  & .col-tab-@{i} {
+    .col(@i);
+//    &:last-child {
+//      margin-right: 0;
+//    }
+  }
+  .generate-tab-columns(@n, (@i+1));
+}
 .generate-columns(@n, @i : 1) when (@i =< @n) {
   & .col-@{i} {
     .col(@i);
-    &:first-child {
-      margin-left: 0;
-    }
+//    &:last-child {
+//      margin-right: 0;
+//    }
   }
   .generate-columns(@n, (@i + 1));
 }
@@ -88,15 +104,17 @@
   // no wrapper means the margin needs adjusting manually.
   width: @avatar-width;
   height: @avatar-width;
+  border-radius: 5%;
 
-  &.round {
-    border-radius: 50%;
-  }
   &.avatar-badge {
     border: 6px solid white;
     box-shadow: 1px 2px 10px grey;
   }
   &.avatar-depressed {
     box-shadow: 2px 3px 6px rgba(0,0,0,.7) inset;
+  }
+
+  &.round {
+    border-radius: 50%;
   }
 }
