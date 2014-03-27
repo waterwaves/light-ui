@@ -13,50 +13,82 @@
     .col-4 {
       background-color: rgba(0,0,0,.2);
     }
+
+    button {
+      padding: 5px 10px;
+      border-radius: 5px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      background-color: lightblue;
+      margin: 5px 5px;
+      font-size: 90%;
+    }
   </style>
 </head>
 <body>
-  <header data-type="nav" class="top fixed" style="background-color: gray;">
-    <div class="container" style="height: 30px;">This is navigation.</div>
-  </header>
+  <nav data-type="navigation" class="top fixed" style="background-color: gray;">
+    <div class="nav-container">
+      <ul class="menu">
+        <li><button>Home</button></li>
+        <li><a href="">Portfolio</a></li>
+        <li>Blog</li>
+        <li>About</li>
+      </ul>
+    </div>
+  </nav>
   <div class="main-container">
     <h1>Responsive Demo</h1>
-    <div class="row">
-      <div class="col-4 col-tab-6">
-        <span>Lorem ipsum dolor sit amet, quem suscipit ea quo, ei mea facer solet offendit. Quo facete scaevola ullamcorper ex. Platonem similique reprimique et eum. Usu ea percipitur necessitatibus. Est quidam commodo et, cu oratio eirmod incorrupte his, eu mea nisl sale liber. Mea homero mucius percipitur ex, oportere argumentum ne sit, eros consectetuer sit ex.</span>
+    <nav data-type="navigation" data-top="60" class="left fixed" >
+      <div class="nav-container" style="background-color: lightcoral;">
+        <ul class="menu">
+          <li>Home</li>
+          <li><a href="#">Portfolio</a></li>
+          <li>Blog</li>
+          <li>About</li>
+        </ul>
       </div>
-      <div class="col-4 col-tab-3">
-        <span>Lorem ipsum dolor sit amet, quem suscipit ea quo, ei mea facer solet offendit. Quo facete scaevola ullamcorper ex. Platonem similique reprimique et eum. Usu ea percipitur necessitatibus. Est quidam commodo et, cu oratio eirmod incorrupte his, eu mea nisl sale liber. Mea homero mucius percipitur ex, oportere argumentum ne sit, eros consectetuer sit ex.</span>
+    </nav>
+    <div>
+      <div class="row">
+        <div class="col-4 col-tab-0 col-mob-6">
+          <span>Lorem ipsum dolor sit amet, quem suscipit ea quo, ei mea facer solet offendit. Quo facete scaevola ullamcorper ex. Platonem similique reprimique et eum. Usu ea percipitur necessitatibus. Est quidam commodo et, cu oratio eirmod incorrupte his, eu mea nisl sale liber. Mea homero mucius percipitur ex, oportere argumentum ne sit, eros consectetuer sit ex.</span>
+        </div>
+        <div class="col-4 col-tab-3 col-mob-12">
+          <span>Lorem ipsum dolor sit amet, quem suscipit ea quo, ei mea facer solet offendit. Quo facete scaevola ullamcorper ex. Platonem similique reprimique et eum. Usu ea percipitur necessitatibus. Est quidam commodo et, cu oratio eirmod incorrupte his, eu mea nisl sale liber. Mea homero mucius percipitur ex, oportere argumentum ne sit, eros consectetuer sit ex.</span>
+        </div>
+        <div class="col-4 col-tab-3 col-mob-12">
+          <span>Lorem ipsum dolor sit amet, quem suscipit ea quo, ei mea facer solet offendit. Quo facete scaevola ullamcorper ex. Platonem similique reprimique et eum. Usu ea percipitur necessitatibus. Est quidam commodo et, cu oratio eirmod incorrupte his, eu mea nisl sale liber. Mea homero mucius percipitur ex, oportere argumentum ne sit, eros consectetuer sit ex.</span>
+        </div>
       </div>
-      <div class="col-4 col-tab-3">
-        <span>Lorem ipsum dolor sit amet, quem suscipit ea quo, ei mea facer solet offendit. Quo facete scaevola ullamcorper ex. Platonem similique reprimique et eum. Usu ea percipitur necessitatibus. Est quidam commodo et, cu oratio eirmod incorrupte his, eu mea nisl sale liber. Mea homero mucius percipitur ex, oportere argumentum ne sit, eros consectetuer sit ex.</span>
+      <div class="row">
+        <div class="col-4 col-mob-12">
+          <div class="col-3">
+            <span>Lorem ipsum dolor sit amet, quem suscipit ea quo, ei mea facer solet offendit. Quo facete scaevola ullamcorper ex. Platonem similique reprimique et eum. Usu ea percipitur necessitatibus. Est quidam commodo et, cu oratio eirmod incorrupte his, eu mea nisl sale liber. Mea homero mucius percipitur ex, oportere argumentum ne sit, eros consectetuer sit ex.</span>
+          </div>
+          <div class="col-3">
+            <span>Lorem ipsum dolor sit amet, quem suscipit ea quo, ei mea facer solet offendit. Quo facete scaevola ullamcorper ex. Platonem similique reprimique et eum. Usu ea percipitur necessitatibus. Est quidam commodo et, cu oratio eirmod incorrupte his, eu mea nisl sale liber. Mea homero mucius percipitur ex, oportere argumentum ne sit, eros consectetuer sit ex.</span>
+          </div>
+          <div class="col-6">
+            <span>Lorem ipsum dolor sit amet, quem suscipit ea quo, ei mea facer solet offendit. Quo facete scaevola ullamcorper ex. Platonem similique reprimique et eum. Usu ea percipitur necessitatibus. Est quidam commodo et, cu oratio eirmod incorrupte his, eu mea nisl sale liber. Mea homero mucius percipitur ex, oportere argumentum ne sit, eros consectetuer sit ex.</span>
+          </div>
+        </div>
+        <div class="col-8">
+          <div class="col-3">
+            <span>Lorem ipsum dolor sit amet, quem suscipit ea quo, ei mea facer solet offendit. Quo facete scaevola ullamcorper ex. Platonem similique reprimique et eum. Usu ea percipitur necessitatibus. Est quidam commodo et, cu oratio eirmod incorrupte his, eu mea nisl sale liber. Mea homero mucius percipitur ex, oportere argumentum ne sit, eros consectetuer sit ex.</span>
+          </div>
+          <div class="col-3">
+            <span>Lorem ipsum dolor sit amet, quem suscipit ea quo, ei mea facer solet offendit. Quo facete scaevola ullamcorper ex. Platonem similique reprimique et eum. Usu ea percipitur necessitatibus. Est quidam commodo et, cu oratio eirmod incorrupte his, eu mea nisl sale liber. Mea homero mucius percipitur ex, oportere argumentum ne sit, eros consectetuer sit ex.</span>
+          </div>
+          <div class="col-6">
+            <span>Lorem ipsum dolor sit amet, quem suscipit ea quo, ei mea facer solet offendit. Quo facete scaevola ullamcorper ex. Platonem similique reprimique et eum. Usu ea percipitur necessitatibus. Est quidam commodo et, cu oratio eirmod incorrupte his, eu mea nisl sale liber. Mea homero mucius percipitur ex, oportere argumentum ne sit, eros consectetuer sit ex.</span>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-4">
-        <div class="col-3">
-          <span>Lorem ipsum dolor sit amet, quem suscipit ea quo, ei mea facer solet offendit. Quo facete scaevola ullamcorper ex. Platonem similique reprimique et eum. Usu ea percipitur necessitatibus. Est quidam commodo et, cu oratio eirmod incorrupte his, eu mea nisl sale liber. Mea homero mucius percipitur ex, oportere argumentum ne sit, eros consectetuer sit ex.</span>
-        </div>
-        <div class="col-3">
-          <span>Lorem ipsum dolor sit amet, quem suscipit ea quo, ei mea facer solet offendit. Quo facete scaevola ullamcorper ex. Platonem similique reprimique et eum. Usu ea percipitur necessitatibus. Est quidam commodo et, cu oratio eirmod incorrupte his, eu mea nisl sale liber. Mea homero mucius percipitur ex, oportere argumentum ne sit, eros consectetuer sit ex.</span>
-        </div>
-        <div class="col-6">
-          <span>Lorem ipsum dolor sit amet, quem suscipit ea quo, ei mea facer solet offendit. Quo facete scaevola ullamcorper ex. Platonem similique reprimique et eum. Usu ea percipitur necessitatibus. Est quidam commodo et, cu oratio eirmod incorrupte his, eu mea nisl sale liber. Mea homero mucius percipitur ex, oportere argumentum ne sit, eros consectetuer sit ex.</span>
-        </div>
-      </div>
-      <div class="col-8">
-        <div class="col-3">
-          <span>Lorem ipsum dolor sit amet, quem suscipit ea quo, ei mea facer solet offendit. Quo facete scaevola ullamcorper ex. Platonem similique reprimique et eum. Usu ea percipitur necessitatibus. Est quidam commodo et, cu oratio eirmod incorrupte his, eu mea nisl sale liber. Mea homero mucius percipitur ex, oportere argumentum ne sit, eros consectetuer sit ex.</span>
-        </div>
-        <div class="col-3">
-          <span>Lorem ipsum dolor sit amet, quem suscipit ea quo, ei mea facer solet offendit. Quo facete scaevola ullamcorper ex. Platonem similique reprimique et eum. Usu ea percipitur necessitatibus. Est quidam commodo et, cu oratio eirmod incorrupte his, eu mea nisl sale liber. Mea homero mucius percipitur ex, oportere argumentum ne sit, eros consectetuer sit ex.</span>
-        </div>
-        <div class="col-6">
-          <span>Lorem ipsum dolor sit amet, quem suscipit ea quo, ei mea facer solet offendit. Quo facete scaevola ullamcorper ex. Platonem similique reprimique et eum. Usu ea percipitur necessitatibus. Est quidam commodo et, cu oratio eirmod incorrupte his, eu mea nisl sale liber. Mea homero mucius percipitur ex, oportere argumentum ne sit, eros consectetuer sit ex.</span>
-        </div>
-      </div>
-    </div>
+    <div class="row"></div>
   </div>
-  <footer data-type="nav" class="bottom" style="background-color: floralwhite;">Demo by Shan He</footer>
+  <nav data-type="navigation" class="bottom" style="background-color: floralwhite;">
+    <div class="nav-container">Demo by Shan He</div>
+  </nav>
 </body>
 </html>

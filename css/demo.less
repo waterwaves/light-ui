@@ -1,9 +1,10 @@
 @page-width-desktop: 1600px;
 @page-width-laptop: 1024px;
 @page-width-tablet: 768px;
-@page-width-phone: 320px;
+@page-width-phone: 640px;
 
 @main-container-margin: 20px; // Both margin-top and margin-bottom of main-container.
+@main-container-width: 1024px;
 
 @base-col-margin: 1.5%;
 @base-margin-bottom: 10px;
@@ -12,71 +13,96 @@
 
 @top-nav-height: auto;
 @bottom-nav-height: auto;
+@left-nav-width: 25%;
 
 @avatar-width: 150px;
 
 
 .main-container {
-  max-width: @page-width-laptop;
+  max-width: @main-container-width;
   margin: @main-container-margin auto;
 }
 
 .container {
-  max-width: @page-width-laptop;
+  max-width: @main-container-width;
   margin: auto;
 }
-
+// ---- Grid System ----
 .row {
   clear: both;
-  width: 100%;
   display: table;
-  margin: @base-margin-top -@base-col-margin @base-margin-bottom -@base-col-margin;
+  margin: 0 -@base-col-margin 0 -@base-col-margin;
   .generate-columns(@total-col-num);
   .col-0 {
     display: none;
   }
 }
-
-.col(@col-num) when (ispercentage(@base-col-margin)) {
-  float: left;
-  margin: 0 @base-col-margin;
-  width: percentage(1 / @total-col-num * @col-num - @base-col-margin * 2 / 100);
-  display: table-row;
-}
-
-@media screen and (max-width: @page-width-tablet) {
-  .row {
-    .generate-tab-columns(@total-col-num);
-  }
-  .col-tab-0 {
-    display: none;
-  }
-}
-
-.generate-tab-columns(@n, @i: 1) when (@i =< @n) {
-  & .col-tab-@{i} {
-    .col(@i);
-//    &:last-child {
-//      margin-right: 0;
-//    }
-  }
-  .generate-tab-columns(@n, (@i+1));
-}
 .generate-columns(@n, @i : 1) when (@i =< @n) {
   & .col-@{i} {
     .col(@i);
-//    &:last-child {
-//      margin-right: 0;
-//    }
   }
   .generate-columns(@n, (@i + 1));
 }
 
-[data-type=nav] {
+.col(@col-num) when (ispercentage(@base-col-margin)) {
+  float: left;
+  margin: @base-margin-top @base-col-margin @base-margin-bottom @base-col-margin;
+  width: percentage(1 / @total-col-num * @col-num - @base-col-margin * 2 / 100);
+  display: table-row;
+}
+
+@media screen and (min-width: @page-width-phone) and (max-width: @page-width-tablet) {
+  .row {
+    .generate-tab-columns(@total-col-num);
+  }
+  .col-tab-0 {
+    display: none !important;
+  }
+  .generate-tab-columns(@n, @i: 1) when (@i =< @n) {
+    & .col-tab-@{i} {
+      .col(@i);
+    }
+    .generate-tab-columns(@n, (@i+1));
+  }
+}
+
+@media screen and (max-width: @page-width-phone) {
+  .row {
+    .generate-mobile-columns(@total-col-num);
+  }
+  .col-mob-0 {
+    display: none !important;
+  }
+  .generate-mobile-columns(@n, @i : 1) when (@i =< @n) {
+    & .col-mob-@{i} {
+      .col(@i);
+    }
+    .generate-mobile-columns(@n, (@i + 1));
+  }
+}
+// ---- End of Grid System ----
+
+[data-type=navigation] {
+  ul.menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
   &.top,
   &.bottom {
     left: 0;
     right: 0;
+    & .nav-container {
+      max-width: @main-container-width;
+      margin: auto;
+    }
+    & ul.menu {
+      &>li {
+        display: inline;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
   }
   &.top {
     height: @top-nav-height;
@@ -84,20 +110,44 @@
   &.bottom {
     height: @bottom-nav-height;
   }
+  &.left {
+    width: @left-nav-width;
+    margin-right: @base-col-margin;
+    margin-top: @base-margin-top;
+    float: left;
+    & + div {
+      width: 100 - @left-nav-width - @base-col-margin;
+      float: left;
+    }
+  }
   &.fixed {
     &.top {
       top: 0;
+      position: fixed;
+
       // changing the margin-top of main-container cannot be achieved due to
       // the value is auto; therefore, move this function into JS.
     }
     &.bottom {
       bottom: 0;
+      position: fixed;
+
       // changing the margin-bottom of main-container cannot be achieved in CSS,
       // therefore, move this functionality into JS.
     }
-    position: fixed;
   }
 }
+
+.sticky {
+  position: fixed;
+}
+
+/*
+  button, block, link
+  button: show as a button
+  block:  show as a block
+  link:   plain
+*/
 
 .avatar {
   // This is for div! Still needs background image, no <img> plz.

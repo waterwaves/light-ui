@@ -8,182 +8,292 @@
 }
 .row {
   clear: both;
-  width: 100%;
   display: table;
-  margin: 5px -1.5% 10px -1.5%;
+  margin: 0 -1.5% 0 -1.5%;
 }
 .row .col-1 {
   float: left;
-  margin: 0 1.5%;
+  margin: 5px 1.5% 10px 1.5%;
   width: 5.33333333%;
   display: table-row;
 }
 .row .col-2 {
   float: left;
-  margin: 0 1.5%;
+  margin: 5px 1.5% 10px 1.5%;
   width: 13.66666667%;
   display: table-row;
 }
 .row .col-3 {
   float: left;
-  margin: 0 1.5%;
+  margin: 5px 1.5% 10px 1.5%;
   width: 22%;
   display: table-row;
 }
 .row .col-4 {
   float: left;
-  margin: 0 1.5%;
+  margin: 5px 1.5% 10px 1.5%;
   width: 30.33333333%;
   display: table-row;
 }
 .row .col-5 {
   float: left;
-  margin: 0 1.5%;
+  margin: 5px 1.5% 10px 1.5%;
   width: 38.66666667%;
   display: table-row;
 }
 .row .col-6 {
   float: left;
-  margin: 0 1.5%;
+  margin: 5px 1.5% 10px 1.5%;
   width: 47%;
   display: table-row;
 }
 .row .col-7 {
   float: left;
-  margin: 0 1.5%;
+  margin: 5px 1.5% 10px 1.5%;
   width: 55.33333333%;
   display: table-row;
 }
 .row .col-8 {
   float: left;
-  margin: 0 1.5%;
+  margin: 5px 1.5% 10px 1.5%;
   width: 63.66666667%;
   display: table-row;
 }
 .row .col-9 {
   float: left;
-  margin: 0 1.5%;
+  margin: 5px 1.5% 10px 1.5%;
   width: 72%;
   display: table-row;
 }
 .row .col-10 {
   float: left;
-  margin: 0 1.5%;
+  margin: 5px 1.5% 10px 1.5%;
   width: 80.33333333%;
   display: table-row;
 }
 .row .col-11 {
   float: left;
-  margin: 0 1.5%;
+  margin: 5px 1.5% 10px 1.5%;
   width: 88.66666667%;
   display: table-row;
 }
 .row .col-12 {
   float: left;
-  margin: 0 1.5%;
+  margin: 5px 1.5% 10px 1.5%;
   width: 97%;
   display: table-row;
 }
 .row .col-0 {
   display: none;
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 640px) and (max-width: 768px) {
   .row .col-tab-1 {
     float: left;
-    margin: 0 1.5%;
+    margin: 5px 1.5% 10px 1.5%;
     width: 5.33333333%;
     display: table-row;
   }
   .row .col-tab-2 {
     float: left;
-    margin: 0 1.5%;
+    margin: 5px 1.5% 10px 1.5%;
     width: 13.66666667%;
     display: table-row;
   }
   .row .col-tab-3 {
     float: left;
-    margin: 0 1.5%;
+    margin: 5px 1.5% 10px 1.5%;
     width: 22%;
     display: table-row;
   }
   .row .col-tab-4 {
     float: left;
-    margin: 0 1.5%;
+    margin: 5px 1.5% 10px 1.5%;
     width: 30.33333333%;
     display: table-row;
   }
   .row .col-tab-5 {
     float: left;
-    margin: 0 1.5%;
+    margin: 5px 1.5% 10px 1.5%;
     width: 38.66666667%;
     display: table-row;
   }
   .row .col-tab-6 {
     float: left;
-    margin: 0 1.5%;
+    margin: 5px 1.5% 10px 1.5%;
     width: 47%;
     display: table-row;
   }
   .row .col-tab-7 {
     float: left;
-    margin: 0 1.5%;
+    margin: 5px 1.5% 10px 1.5%;
     width: 55.33333333%;
     display: table-row;
   }
   .row .col-tab-8 {
     float: left;
-    margin: 0 1.5%;
+    margin: 5px 1.5% 10px 1.5%;
     width: 63.66666667%;
     display: table-row;
   }
   .row .col-tab-9 {
     float: left;
-    margin: 0 1.5%;
+    margin: 5px 1.5% 10px 1.5%;
     width: 72%;
     display: table-row;
   }
   .row .col-tab-10 {
     float: left;
-    margin: 0 1.5%;
+    margin: 5px 1.5% 10px 1.5%;
     width: 80.33333333%;
     display: table-row;
   }
   .row .col-tab-11 {
     float: left;
-    margin: 0 1.5%;
+    margin: 5px 1.5% 10px 1.5%;
     width: 88.66666667%;
     display: table-row;
   }
   .row .col-tab-12 {
     float: left;
-    margin: 0 1.5%;
+    margin: 5px 1.5% 10px 1.5%;
     width: 97%;
     display: table-row;
   }
   .col-tab-0 {
-    display: none;
+    display: none !important;
   }
 }
-[data-type=nav].top,
-[data-type=nav].bottom {
+@media screen and (max-width: 640px) {
+  .row .col-mob-1 {
+    float: left;
+    margin: 5px 1.5% 10px 1.5%;
+    width: 5.33333333%;
+    display: table-row;
+  }
+  .row .col-mob-2 {
+    float: left;
+    margin: 5px 1.5% 10px 1.5%;
+    width: 13.66666667%;
+    display: table-row;
+  }
+  .row .col-mob-3 {
+    float: left;
+    margin: 5px 1.5% 10px 1.5%;
+    width: 22%;
+    display: table-row;
+  }
+  .row .col-mob-4 {
+    float: left;
+    margin: 5px 1.5% 10px 1.5%;
+    width: 30.33333333%;
+    display: table-row;
+  }
+  .row .col-mob-5 {
+    float: left;
+    margin: 5px 1.5% 10px 1.5%;
+    width: 38.66666667%;
+    display: table-row;
+  }
+  .row .col-mob-6 {
+    float: left;
+    margin: 5px 1.5% 10px 1.5%;
+    width: 47%;
+    display: table-row;
+  }
+  .row .col-mob-7 {
+    float: left;
+    margin: 5px 1.5% 10px 1.5%;
+    width: 55.33333333%;
+    display: table-row;
+  }
+  .row .col-mob-8 {
+    float: left;
+    margin: 5px 1.5% 10px 1.5%;
+    width: 63.66666667%;
+    display: table-row;
+  }
+  .row .col-mob-9 {
+    float: left;
+    margin: 5px 1.5% 10px 1.5%;
+    width: 72%;
+    display: table-row;
+  }
+  .row .col-mob-10 {
+    float: left;
+    margin: 5px 1.5% 10px 1.5%;
+    width: 80.33333333%;
+    display: table-row;
+  }
+  .row .col-mob-11 {
+    float: left;
+    margin: 5px 1.5% 10px 1.5%;
+    width: 88.66666667%;
+    display: table-row;
+  }
+  .row .col-mob-12 {
+    float: left;
+    margin: 5px 1.5% 10px 1.5%;
+    width: 97%;
+    display: table-row;
+  }
+  .col-mob-0 {
+    display: none !important;
+  }
+}
+[data-type=navigation] ul.menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+[data-type=navigation].top,
+[data-type=navigation].bottom {
   left: 0;
   right: 0;
 }
-[data-type=nav].top {
+[data-type=navigation].top .nav-container,
+[data-type=navigation].bottom .nav-container {
+  max-width: 1024px;
+  margin: auto;
+}
+[data-type=navigation].top ul.menu > li,
+[data-type=navigation].bottom ul.menu > li {
+  display: inline;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+[data-type=navigation].top {
   height: auto;
 }
-[data-type=nav].bottom {
+[data-type=navigation].bottom {
   height: auto;
 }
-[data-type=nav].fixed {
+[data-type=navigation].left {
+  width: 25%;
+  margin-right: 1.5%;
+  margin-top: 5px;
+  float: left;
+}
+[data-type=navigation].left + div {
+  width: 73.5%;
+  float: left;
+}
+[data-type=navigation].fixed.top {
+  top: 0;
   position: fixed;
 }
-[data-type=nav].fixed.top {
-  top: 0;
-}
-[data-type=nav].fixed.bottom {
+[data-type=navigation].fixed.bottom {
   bottom: 0;
+  position: fixed;
 }
+.sticky {
+  position: fixed;
+}
+/*
+  button, block, link
+  button: show as a button
+  block:  show as a block
+  link:   plain
+*/
 .avatar {
   width: 150px;
   height: 150px;
