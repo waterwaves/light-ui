@@ -14,8 +14,11 @@
 @top-nav-height: auto;
 @bottom-nav-height: auto;
 @left-nav-width: 25%;
+@right-nav-width: 25%;
 
 @avatar-width: 150px;
+
+@import url('reset.css');
 
 
 .main-container {
@@ -82,6 +85,10 @@
 }
 // ---- End of Grid System ----
 
+// Navigation bar/block
+// Top and bottom should be put outside of main-container.
+// Left and right are suggested to put inside of main-container and before the main content,
+// but this depends on the requirement.
 [data-type=navigation] {
   ul.menu {
     margin: 0;
@@ -118,6 +125,18 @@
     & + div {
       width: 100 - @left-nav-width - @base-col-margin;
       float: left;
+    }
+  }
+  &.right {
+    width: @right-nav-width;
+    margin-left: @base-col-margin;
+    margin-top: @base-margin-top;
+    float: right;
+    & + div {
+      float: left;
+      width: 100 - @right-nav-width - @base-col-margin;
+      position: relative;
+      z-index: -1;
     }
   }
   &.fixed {

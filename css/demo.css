@@ -1,3 +1,4 @@
+@import url('reset.css');
 .main-container {
   max-width: 1024px;
   margin: 20px auto;
@@ -276,6 +277,18 @@
 [data-type=navigation].left + div {
   width: 73.5%;
   float: left;
+}
+[data-type=navigation].right {
+  width: 25%;
+  margin-left: 1.5%;
+  margin-top: 5px;
+  float: right;
+}
+[data-type=navigation].right + div {
+  float: left;
+  width: 73.5%;
+  position: relative;
+  z-index: -1;
 }
 [data-type=navigation].fixed.top {
   top: 0;

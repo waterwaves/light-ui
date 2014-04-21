@@ -22,7 +22,10 @@ $(function() {
     var $navContainer = $sideNavBar.children('.nav-container');
     var navContainerWidth = $navContainer.width();
     var toTop = $sideNavBar.data('top');
-    $(window).scroll(function() {
+    $(window).on('resize', function() {
+      navContainerWidth = $navContainer.width();
+    });
+    $(window).on('scroll', function() {
       var offsetToWindow = $sideNavBar.offset().top - $(this).scrollTop();
       if (offsetToWindow <= toTop) {
         $navContainer.addClass('sticky').css('width', navContainerWidth).css('top', toTop);
